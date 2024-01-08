@@ -1,0 +1,50 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --toggle-switch-bg: #232428;
+    --toggle-border: #232428;
+    --toggle-bg: #fff;
+}
+
+/* Hide the checkbox */
+.toggle-input {
+    visibility: hidden;
+}
+
+/* Style the toggle switch container */
+.toggle-wrap {
+    position: relative;
+    width: 70px;
+    height: 30px;
+    background-color: var(--toggle-bg);
+    border-radius: 15px; /* Make the container circular */
+    border: 2px solid var(--toggle-border);
+}
+
+/* Create the toggle switch */
+.toggle-switch {
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background-color: var(--toggle-switch-bg);
+    border-radius: 50%; /* Make the switch circular */
+    transition: 1s; /* Add a smooth transition effect */
+}
+
+/* Style the toggle switch for the checked state */
+.toggle-input:checked ~ .toggle-switch {
+    transform: translateX(40px); /* Move the switch to the right */
+}
+
+/* Style the cursor for hover and click */
+.toggle-wrap:hover .toggle-switch,
+.toggle-wrap:active .toggle-switch {
+    cursor: pointer;
+}
